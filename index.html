@@ -22,7 +22,7 @@
         <!-- main container -->
         <div class="flex flex-col md:flex-row lg:flex-grow gap-3">
             <!--ship  carid container -->
-              <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+              <div class="flex-1 justify-center items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
                 <!-- Triangle caird -->
                 <div class="card w-[100%] bg-base-100 shadow-xl">
                     <figure><img src="images/triangle.png" alt="Shoes" /></figure>
@@ -38,7 +38,7 @@
                         <span>cm</span>
                       </div>
                       <div id="" class=" text-2xl">
-                        <p> area: <span id="triangle-value-set"></span> <span>cm<sup>2</sup></span></p>
+                        <p> area: <span id="triangle-value-set">0</span> <span>cm<sup>2</sup></span></p>
                        </div>
                       <div class="card-actions">
                         <button onclick="clacluteTraingle()" class="btn btn-primary w-full">Calculate </button>
@@ -49,7 +49,7 @@
                   <!-- Rectangle card -->
                   
                   <div class="card w-[100%] bg-base-100 shadow-xl">
-                    <figure><img src="images/rectangle.png" alt="Shoes" /></figure>
+                    <img src="images/rectangle.png" alt="Shoes" />
                     <div class="card-body">
                       <h2 class="card-title text-center">Rectangle</h2>
                       <p class="text-center">Area (A) = w * I</p>
@@ -62,7 +62,7 @@
                         <span>cm</span>
                       </div>
                       <div id="" class=" text-2xl">
-                        <p> area: <span id="ractiangle-value-set"></span> <span>cm<sup>2</sup></span></p>
+                        <p> area: <span id="ractiangle-value-set"> 0</span> <span>cm<sup>2</sup></span></p>
                        </div>
                       <div class="card-actions">
                         <button onclick="rectiangleCalcluteArea()" class="btn btn-primary w-full"> Calculate </button>
@@ -73,27 +73,102 @@
 
                   <!-- Parallelogram card -->
                   <div class="card w-[100%] bg-base-100 shadow-xl">
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                  <img src="images/parallelogram.png" alt="Shoes" />
                     <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+                      <h2 class="card-title text-center">Parallelogram</h2>
+                      <p class="text-center">Area (A) = b * h</p>
+
+                      <div class="flex justify-center items-center space-x-1">
+                        <input id="parallelogram-base" class="w-14 rounded p-2 text-[20px] bg-blue-50" type="text" placeholder="b">
+                        <span>cm</span>
+                        
+                        <input id="parallelogram-height" class="w-14 rounded p-2 text-[20px] bg-blue-50"  type="text" placeholder="h">
+                        <span>cm</span>
                       </div>
+                      <div id="" class=" text-2xl">
+                        <p> area: <span id="parallelogram-value-set">0</span><span>cm<sup>2</sup></span></p>
+                       </div>
+                      <div class="card-actions">
+                        <button onclick="ParallelogramAreaClaclute()" class="btn btn-primary w-full"> Calculate </button>
+                      </div>
+                      
                     </div>
                   </div>
+
                   <!-- Rhombus card -->
                   <div class="card w-[100%] bg-base-100 shadow-xl">
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                    <img src="images/rhombus.png" alt="Shoes" />
                     <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+                      <h2 class="card-title text-center">Rhombus</h2>
+                      <p class="text-center">Area (A) = 0.5* d <sub>1</sub>*d<sub>2</sub></p>
+
+                      <div class="flex justify-center items-center space-x-1">
+                        <input id="rombosh-d1" class="w-14 rounded p-2 text-[20px] bg-blue-50" type="text" placeholder="d1">
+                        <span>cm</span>
+                        
+                        <input id="rombosh-d2" class="w-14 rounded p-2 text-[20px] bg-blue-50"  type="text" placeholder="d2">
+                        <span>cm</span>
                       </div>
+                      <div id="" class=" text-2xl">
+                        <p> area: <span id="rombosh-area-set">0</span> <span>cm<sup>2</sup></span></p>
+                       </div>
+                      <div class="card-actions">
+                        <button onclick="romboshCalcluteArea()" class="btn btn-primary w-full"> Calculate </button>
+                      </div>
+                      
                     </div>
                   </div>
-              </div>
+
+<!-- pentagon card -->
+<div class="card w-[100%] bg-base-100 shadow-xl">
+  <img src="images/pentagon.png" alt="Shoes" />
+  <div class="card-body">
+    <h2 class="card-title text-center">pentagon</h2>
+    <p class="text-center">Area (A) = 0.5* p * b</p>
+
+    <div class="flex justify-center items-center space-x-1">
+      <input id="pentagon-p" class="w-14 rounded p-2 text-[20px] bg-blue-50" type="text" placeholder="p">
+      <span>cm</span>
+      
+      <input id="pentagon-b" class="w-14 rounded p-2 text-[20px] bg-blue-50"  type="text" placeholder="b">
+      <span>cm</span>
+    </div>
+    <div id="" class=" text-2xl">
+      <p> area: <span id="pentagon-area-set">0</span> <span>cm<sup>2</sup></span></p>
+     </div>
+    <div class="card-actions">
+      <button onclick="pentagonCalcluteArea()" class="btn btn-primary w-full"> Calculate </button>
+    </div>
+    
+  </div>
+</div>
+
+
+   <!-- ellipse card -->
+<div class="card w-[100%] bg-base-100 shadow-xl">
+  <img src="images/ellipse.png" alt="Shoes" />
+  <div class="card-body">
+    <h2 class="card-title text-center">Ellipse</h2>
+    <p class="text-center">Area (A) = 3.0416 * a * b</p>
+
+    <div class="flex justify-center items-center space-x-1">
+      <input id="ellipse-a" class="w-14 rounded p-2 text-[20px] bg-blue-50" type="text" placeholder="A">
+      <span>cm</span>
+      
+      <input id="ellipse-b" class="w-14 rounded p-2 text-[20px] bg-blue-50"  type="text" placeholder="B">
+      <span>cm</span>
+    </div>
+    <div id="" class=" text-2xl">
+      <p> area: <span id="ellipse-area-set">0</span> <span>cm<sup>2</sup></span></p>
+     </div>
+    <div class="card-actions">
+      <button onclick="ellipseCalcluteArea()" class="btn btn-primary w-full"> Calculate </button>
+    </div>
+    
+  </div>
+</div>
+
+            </div>
               <!-- claclutor container -->
               <div class="w-96 border-[2px] text-center text-[30px] rounded-lg">
                    <h1>claclutor</h1>
@@ -110,5 +185,9 @@
 
 <script src="script/triangle-claclute.js"></script>
 <script src="script/ractiangle.js"></script>
+<script src="script/Parallelogram.js"></script>
+<script src="script/rombosh.js"></script>
+<script src="script/Pentagon.js"></script>
+<script src="script/Ellipse.js"></script>
 </body>
 </html>
